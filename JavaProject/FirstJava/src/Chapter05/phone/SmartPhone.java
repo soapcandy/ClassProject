@@ -33,11 +33,8 @@ public class SmartPhone {
 		
 	}
 	
-	SmartPhone() {
-		
-		color = "WHITE";
-		size = 4.5f;
-		volume = 5;
+	SmartPhone() {	
+		this("white", 4.5f, 5);
 		
 	}
 	
