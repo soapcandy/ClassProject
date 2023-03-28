@@ -2,7 +2,7 @@ package Chapter05;
 
 public class InstanceVariable {
 
-	static String name = "KNIG";
+	 String name = "KNIG";
 	int age = 12;
 	
 	void telName () {
@@ -33,6 +33,6 @@ public class InstanceVariable {
 		iv.telName();
 		iv.tellAge();
 		
-		InstanceVariable.name = "";
+//		InstanceVariable.name = "";
 	}
 }

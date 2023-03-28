@@ -13,8 +13,8 @@ public class SmartPhone {
 	
 	// 메소드 정의
 	// 전화 걸기 가능
-	void call() {
-		int number = 119;
+	void call(String number) {
+		//int number = 119;
 		System.out.println(number + "전화를 겁니다!");
 		
 	}
@@ -59,7 +59,7 @@ public class SmartPhone {
 		System.out.println();
 		
 		// 인스턴스 메소드의 호출 -> 참조변수, 메소드 이름()
-		sp.call();
+		sp.call("119");
 		
 		// 볼륨의 값을 변경하는 방법
 		// 변수에 직접 대입(x)
