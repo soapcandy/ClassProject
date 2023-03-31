@@ -2,35 +2,52 @@ package Task.Ch7;
 
 public class Person {
 	
-	private String name;
-	private int number;
+//	① 이름을 저장하는 변수, 주민등록번호를 저장하는 변수를 정의해봅시다.
+//	② 인사하는 메소드를 정의해봅시다.
+//	- “안녕하세요. 저는 OOO입니다. 00살 입니다.”라는 문자열이 출력하도록 정의합시다.
 	
-	public Person(String name, int number) {
+	private String name;
+	private String number;
+	
+	public Person(String name, String number) {
 		super();
 		this.name = name;
 		this.number = number;
 	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public int getNumber() {
-		return number;
-	}
-
-	public void setNumber(int number) {
-		this.number = number;
+	
+	public void printGreeting() {
+		System.out.println( "안녕하세요. 저는 " + name + "입니다. " + getAge() + "살 입니다.");
 	}
 	
-	void call() {
-		System.out.println( "안녕하세요. 저는 " + name + "입니다. " + number + "살 입니다.");
+	// 주민번호를 통해서 나이를 계산해서 반환 메소드
+	int getAge() {
+		int age = 0;
+		
+		//991111-1000000
+		String year = number.substring(0, 2);
+		char gender = number.charAt(7);
+		
+//		System.out.println(year + " : " + gender);
+		
+		//int personYear = 0;
+		//age = 2023 - personYear + 1;
+		if (gender < '3') {
+			//1900 + year
+			age =2023 - 1900 - Integer.parseInt(year) + 1; // 아래 방법과 같은것
+		}
+		else {
+			//2000 + year
+			age =2023 - (2000 + Integer.parseInt(year)) + 1;
+		}
+		
+		return age;
 	}
 	
+	public static void main(String[] args) {
+		Person p = new Person("tester", "001122-3000000");
+		
+		System.out.println(p.getAge());
+	}
 }
 
 
