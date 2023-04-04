@@ -9,10 +9,10 @@ public class CalendarTest {
 		Calendar cal = Calendar.getInstance();
 		System.out.println(cal.getTime());
 
-		cal.add(Calendar.HOUR, 1);
+//		cal.add(Calendar.HOUR, 1);
 		System.out.println(cal.getTime());
 		
-		cal.add(Calendar.DAY_OF_MONTH, 1);
+//		cal.add(Calendar.DAY_OF_MONTH, 1);
 		System.out.println(cal.getTime());
 		
 		Calendar cal2 = Calendar.getInstance();
@@ -27,7 +27,7 @@ public class CalendarTest {
 		System.out.println(cal2.before(cal2));
 		System.out.println(cal3.before(cal3));
 		
-		if(cal.before(cal3)) {
+		if(cal.before(cal2)) {
 			System.out.println("이벤트 진행중입니다.");
 		}
 		else {
