@@ -60,6 +60,7 @@ public class ArrayListTest {
 		System.out.println("지정된 이름의 개수: " + list.size());
 		System.out.println("index: 0 ~ " + (list.size() - 1));
 		System.out.println();
+		
 		// 반복문을 이용해서 일괄 처리
 		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i) + ": " + list.get(i).charAt(0));
