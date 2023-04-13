@@ -50,3 +50,17 @@ select job, min(sal)from emp where mgr is not null group by job having min(sal) 
 select deptno, count(*), round(avg(sal), 2) from emp group by deptno;
 
 -- 30. 각 부서에 대해 부서번호 이름, 지역 명, 사원 수, 부서내의 모든 사원의 평균 급여를 출력하시오. 평균 급여는 정수로 반올림 하시오. DECODE 사용.
+select decode(deptno,
+        10, 'ACCOUNTING',
+        20, 'RESEARCH',
+        30, 'SALE'
+        ) as "부서명",
+        decode(deptno,
+        10, '서울',
+        20, '부산',
+        30, '대전'
+        ) as "지역명",
+        count(*) as "사원 수",
+        round(avg(sal)) as "평균 급여"
+from emp group by deptno
+        
