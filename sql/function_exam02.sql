@@ -1,0 +1,2 @@
+-- select example
+-- function exam2
