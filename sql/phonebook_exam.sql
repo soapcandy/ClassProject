@@ -1,7 +1,9 @@
 
 -- 전화번호 저장 테이블
 
+drop TABLE phoneInfo_basic;
 drop TABLE phoneInfo_univ;
+drop TABLE phoneInfo_com;
 
 create table phoneInfo_basic (
     idx number(6) constraint pk_phoneInfo_basic PRIMARY KEY not null,
@@ -31,7 +33,7 @@ create table phoneInfo_com (
 select * from phoneinfo_basic;
 update phoneInfo_basic set fr_address = 'busan' where idx = 10;
 delete from phoneinfo_basic;
-insert into phoneInfo_basic values(10,'Park','010-1234-5678', 'hr@gmail.com', 'korea', sysdate);
+insert into phoneInfo_basic values(10,'Park','010-1234-5678', 'hr@gmail.com', 'korea', default);
 
 
 
