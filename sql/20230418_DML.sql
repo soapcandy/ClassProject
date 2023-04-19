@@ -126,7 +126,7 @@ set loc = (select loc from dept02 where deptno = 40)
 where deptno  = 20
 ;
 
--- 서브쿠리를 이용해서 부서번호가 20인 부서의 부서명과 지역명을
+-- 서브쿼리를 이용해서 부서번호가 20인 부서의 부서명과 지역명을
 -- 부서번호가 30인 부서의 부서명과 지역명으로 바꿔라
 update  dept02
 set (dname, loc) = (select dname, loc from dept02 where deptno = 30)
@@ -147,3 +147,33 @@ select * from emp01;
 -- 사원 테이블에서 부서명이 SALES인 사원을 모두 삭제해 봅시다
 select deptno from dept02 where dname = 'SALES';
 delete from emp01 where deptno = (select deptno from dept02 where dname = 'SALES');
+
+commit;
+
+delete from emp;
+
+select * from emp;
+
+select * from emp01;
+delete from emp01;
+
+rollback;
+
+
+-- sequence : 연속된 숫자를 생성해주는 객체
+-- create sequence 이름 [옵션]
+
+drop sequence seq_dept_deptno;
+create sequence seq_dept_deptno
+start with 10
+increment by 10
+;
+
+-- 자동 생성된 값 : 시퀀스객체이름.nextval
+select seq_dept_deptno.nextval
+from dual;
+select * from dept01;
+insert into dept01 values(seq_dept_deptno.nextval, 'test이름', 'test위치');
+
+select seq_dept_deptno.currval
+from dual;
