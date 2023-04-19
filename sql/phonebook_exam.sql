@@ -14,6 +14,9 @@ create table phoneInfo_basic (
     fr_regdate Date default sysdate
 );
 
+-- sequence 생성
+create sequence seq_pbasic_idx; 
+
 create table phoneInfo_univ (
     idx number(6) constraint pk_phoneInfo_univ PRIMARY KEY not null,
     fr_u_major varchar(20) default 'N' not null,
@@ -21,11 +24,17 @@ create table phoneInfo_univ (
     fr_ref number(7) constraint fk_phoneInfo_univ REFERENCES phoneInfo_basic(idx) not null
 );
 
+-- sequence 생성
+create sequence seq_puniv_idx;
+
 create table phoneInfo_com (
     idx number(6) constraint pk_phoneInfo_com PRIMARY KEY not null,
     fr_c_company varchar(20) default 'N' not null,
     fr_ref number(6) constraint fk_phoneInfo_com REFERENCES phoneInfo_basic(idx) not null
 );
+
+-- sequence 생성
+create sequence seq_pcom_idx;
 
 ------------------------------------------------------------------------------------
 
@@ -33,7 +42,7 @@ create table phoneInfo_com (
 select * from phoneinfo_basic;
 update phoneInfo_basic set fr_address = 'busan' where idx = 10;
 delete from phoneinfo_basic;
-insert into phoneInfo_basic values(10,'Park','010-1234-5678', 'hr@gmail.com', 'korea', default);
+insert into phoneInfo_basic values(seq_pbasic_idx.nextval,'Park','010-1234-5678', 'hr@gmail.com', 'korea', default);
 
 
 
@@ -41,10 +50,10 @@ insert into phoneInfo_basic values(10,'Park','010-1234-5678', 'hr@gmail.com', 'k
 select * from phoneinfo_univ;
 update phoneInfo_univ set fr_u_year = '2' where idx = 10;
 delete from phoneinfo_univ;
-insert into phoneinfo_univ values(10, 'baseball', '3', 10);
+insert into phoneinfo_univ values(seq_puniv_idx.nextval, 'baseball', '3', seq_pbasic_idx.currval);
 
 -- 3. phoneinfo_com 테이블의 SELECT, UPDATE, DELETE, INSERT 하는 SQL
 select * from phoneinfo_com;
 update phoneInfo_com set fr_c_company = 'hi' where idx = 10;
 delete from phoneinfo_com;
-insert into phoneinfo_com values(10, 'hr', 10);
+insert into phoneinfo_com values(seq_pcom_idx.nextval, 'hr', seq_pbasic_idx.currval);
