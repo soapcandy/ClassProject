@@ -7,32 +7,38 @@ import dao.DeptDao;
 import domain.Dept;
 import util.ConnectionProvider;
 
-public class DeptSearchService {
+public class DeptUpdateService {
 
 	DeptDao dao;
 
-	public DeptSearchService() {
+	public DeptUpdateService() {
 		this.dao = new DeptDao();
 	}
 
-	// 검색 번호를 받고 Dept 정보를 저장하고 있는 객체를 반환
-	public Dept searchDept(int deptno) {
+	public int updateDept(Dept newDept) {
 
 		Connection conn = null;
-		Dept dept = null;
+		int result = 0;
 
 		try {
-
 			conn = ConnectionProvider.getConnection();
-			dept = dao.selectByDeptno(conn, deptno);
+			result = dao.updateDeptByDeptno(conn, newDept);
 
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		} finally {
+			if (conn != null) {
+				try {
+					conn.close();
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
 		}
 
-		return dept;
-
+		return result;
 	}
 
 }

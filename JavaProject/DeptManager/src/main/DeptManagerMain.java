@@ -2,15 +2,18 @@ package main;
 
 import java.util.Scanner;
 
+import controller.DeptInsertController;
 import controller.DeptListController;
+import controller.DeptSearchController;
+import controller.DeptUpdateController;
 
 public class DeptManagerMain {
-	
+
 	public static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		
-		// Controller: view -> Service -> Dao -> Service -> Controller: view
+
+		// Controller : view -> Service -> Dao -> Service -> Controller : view
 
 		while (true) {
 			System.out.println("메뉴를 입력하세요.");
@@ -26,6 +29,15 @@ public class DeptManagerMain {
 			switch (menu) {
 			case 1:
 				new DeptListController().getDeptList();
+				break;
+			case 2:
+				new DeptSearchController().searchDept();
+				break;
+			case 3:
+				new DeptInsertController().insertDept();
+				break;
+			case 4:
+				new DeptUpdateController().updateDept();
 				break;
 			case 6:
 				return;
