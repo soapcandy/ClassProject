@@ -11,4 +11,4 @@ request.setAttribute("list", str);
 
 // forward 처리 => bbb.jsp
 %>
-<jsp: forward page= "bbb.jsp"/>
+<jsp:forward page= "bbb.jsp"/>
