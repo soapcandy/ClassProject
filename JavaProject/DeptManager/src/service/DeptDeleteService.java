@@ -10,9 +10,17 @@ public class DeptDeleteService {
 
 	DeptDao dao;
 
-	public DeptDeleteService() {
-		this.dao = new DeptDao();
+	// 싱글톤 시작
+	private DeptDeleteService() {
+		this.dao = DeptDao.getInstance();
 	}
+
+	private static DeptDeleteService service = new DeptDeleteService();
+
+	public static DeptDeleteService getInstance() {
+		return service;
+	}
+	// 싱글톤 끝
 
 	public int deleteDept(int deptno) {
 
@@ -39,6 +47,7 @@ public class DeptDeleteService {
 		}
 
 		return result;
+
 	}
 
 }

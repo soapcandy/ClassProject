@@ -9,19 +9,25 @@ import service.DeptListService;
 import service.DeptSearchService;
 import service.DeptUpdateService;
 
-public class DeptUpdateController {
+public class DeptUpdateController implements Controller {
 
 	DeptListService listService;
 	DeptSearchService searchService;
 	DeptUpdateService updateService;
 
-	public DeptUpdateController() {
-		this.listService = new DeptListService(new DeptDao());
-		this.searchService = new DeptSearchService();
-		this.updateService = new DeptUpdateService();
+	private DeptUpdateController() {
+		this.listService = DeptListService.getInstance();
+		this.searchService = DeptSearchService.getInstance();
+		this.updateService = DeptUpdateService.getInstance();
 	}
 
-	public void updateDept() {
+	private static DeptUpdateController controller = new DeptUpdateController();
+
+	public static DeptUpdateController getInstance() {
+		return controller;
+	}
+
+	public void process() {
 
 		// 1. 수정하고자하는 데이터를 사용자로부터 받아서 => Dept
 		Dept newDept = inputUpdateDept();
