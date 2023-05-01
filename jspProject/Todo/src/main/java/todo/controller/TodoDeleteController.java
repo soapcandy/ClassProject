@@ -12,15 +12,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/todo/delete")
 public class TodoDeleteController extends HttpServlet {
-	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
+		
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("TodoDeleteController");
+		System.out.println("TodoDeleteController...doPost()...");
 		
 		// 사용자로부터 no 받기
 		String noStr = request.getParameter("no");

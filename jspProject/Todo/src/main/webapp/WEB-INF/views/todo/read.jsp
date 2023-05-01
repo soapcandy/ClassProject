@@ -15,8 +15,8 @@
 		완료 : <input type="checkbox" name="complete" ${complete == 'done' ? 'checked' : ''}> <br>
 		<!--  checkbox value => "on" --> 
 		<a href="modify?no=${no}">수정</a> 
+		
 		<%-- <a href="delete?no=${no}">삭제</a> --%>
-	
 		<form action="delete" method="post">
 			<input type="hidden" name="no" value="${no}">
 			<input type="submit" value="삭제">
