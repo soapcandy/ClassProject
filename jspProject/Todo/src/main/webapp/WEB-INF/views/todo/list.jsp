@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Todo LIST</h1>
+	<h1>Todo LIST (${loginInfo})</h1>
 
 	<ul>
 
@@ -25,6 +25,9 @@
 	</ul>
 
 	<a href="${pageContext.request.contextPath}/todo/register">Todo Register</a>
+	
+	<a href="/app/login">로그인</a>
+	<a href="/app/logout">로그아웃</a>
 
 </body>
 </html>
