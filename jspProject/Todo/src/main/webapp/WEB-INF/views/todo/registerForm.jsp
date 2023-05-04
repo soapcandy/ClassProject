@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>Todo 등록</h1>
+	<h1>Todo 등록 ( ${loginInfo.uid} [${loginInfo.uname}] )</h1>
 	
 	<form method="post">
 		할일: <input type="text" name="todo"> <br>
