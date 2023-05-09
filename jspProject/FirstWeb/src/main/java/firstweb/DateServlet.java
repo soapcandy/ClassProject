@@ -26,11 +26,12 @@ public class DateServlet extends HttpServlet {
 		out.println("<html>");
 		out.println("<head><title>현재 시간</title></head>");
 		out.println("<body>");
-		out.println("<h1>안녕하세요</h1>");
+		out.println("<h1>안녕하세요222</h1>");
 		out.println("<h3>" + now.toString() + "</h3>");
 		out.println("</body>");
 		out.println("</html>");
 		out.close();
+		
 
 	}
 
