@@ -22,7 +22,7 @@ public class SearchController {
             @RequestParam(value = "page", defaultValue = "1") int page,
             HttpServletRequest request,
             @ModelAttribute("req") UserRequest userRequest
-    ){
+    ) {
 
         log.info("/search/search1 ...");
         log.info("keyword : " + keyword);
@@ -46,9 +46,15 @@ public class SearchController {
         log.info(userRequest);
 
 
-        model.addAttribute("result", keyword+tno);
+        model.addAttribute("result", keyword + tno);
         model.addAttribute("page", page);
 
+
         return "search/search1";
+    }
+
+    private void test() {
+        Model m = null;
+        search1(m, "", "", 1, null, new UserRequest());
     }
 }
