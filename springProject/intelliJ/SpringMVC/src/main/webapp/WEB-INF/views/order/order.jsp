@@ -9,19 +9,23 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-  <title>Order</title>
+    <title>Order</title>
 </head>
 <body>
 
 <h1>주문내역</h1>
 
 <c:forEach items="${order.orderItems}" var="orderItem">
-  <h3>상품</h3>
-  ID - ${orderItem.itemId} <br>
-  개수 - ${orderItem.number} <br>
-  주의 사항 - ${orderItem.remark} <br>
+    <h3>상품</h3>
+    ID - ${orderItem.itemId} <br>
+    개수 - ${orderItem.number} <br>
+    주의 사항 - ${orderItem.remark} <br>
 </c:forEach>
 
+<h3>배송지</h3>
+우편번호 - ${order.address.zipcode} <br>
+주소1 - ${order.address.address1} <br>
+주소2 - ${order.address.address2}
 
 
 </body>
