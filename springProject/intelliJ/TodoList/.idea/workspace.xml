@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f19aa028-c794-4a89-a00f-4ba2726bd7d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/CookieController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/HeaderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/todo/controller/TodoRegistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/todo/controller/TodoRegistController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +302,7 @@
       <workItem from="1683766138133" duration="6998000" />
       <workItem from="1683773636581" duration="6010000" />
       <workItem from="1683852699503" duration="9571000" />
-      <workItem from="1684110466813" duration="311000" />
+      <workItem from="1684110466813" duration="712000" />
     </task>
     <servers />
   </component>
