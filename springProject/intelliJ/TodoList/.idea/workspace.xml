@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f19aa028-c794-4a89-a00f-4ba2726bd7d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/OrderController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/domain/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/domain/OrderCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/domain/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/webapp/WEB-INF/views/order/order.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/webapp/WEB-INF/views/order/orderForm.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/CookieController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/HeaderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringMVC/src/main/java/com/hi/app/controller/SearchController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/todo/controller/TodoRegistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/todo/controller/TodoRegistController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,22 +68,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/hi/Documents/GitHub/ClassProject/springProject/intelliJ/SpringMVC",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "70ab5eafc742d43bfbee6c92145ba50e",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/hi/Documents/GitHub/ClassProject/springProject/intelliJ/SpringMVC&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;70ab5eafc742d43bfbee6c92145ba50e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hi\Documents\GitHub\ClassProject\springProject\intelliJ\TodoList\src\main\resources" />
@@ -308,7 +305,8 @@
       <updated>1683766137215</updated>
       <workItem from="1683766138133" duration="6998000" />
       <workItem from="1683773636581" duration="6010000" />
-      <workItem from="1683852699503" duration="9570000" />
+      <workItem from="1683852699503" duration="9571000" />
+      <workItem from="1684110466813" duration="311000" />
     </task>
     <servers />
   </component>

@@ -13,42 +13,45 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Log4j2
 public class TodoRegistController {
 
-    // get: form 페이지로 전달
+    // get : form 페이지로 응답
     @RequestMapping(method = RequestMethod.GET)
     public String getRegistForm() {
-        log.info("GET /todo/regist");
+        log.info("GET /todo/regist ");
         return "todo/registForm";
-        // /WEB-INF/views/todo/regist.jsp
+        // /WEB-INF/views/todo/registForm.jsp
     }
 
-    // post: redirect => /todo/list, view 필요가 없다!!!
+    // post : redirect -> /todo/list , view 필요가 없다!!!
     @RequestMapping(method = RequestMethod.POST)
-    public String regist(Model model,
-                         String todo,
-                         String duedate,
-                         @RequestParam(value = "todo", required = false) String requestTodo,
-                         @RequestParam(value = "duedate", defaultValue = "2023-12-25") String requestDuedate,
-                         TodoRequest todoRequest) {
+    public String regist(
+            Model model,
+            String todo,
+            String duedate,
+            @RequestParam(value = "todo", required = false) String requestTodo,
+            @RequestParam(value = "duedate", defaultValue = "2023-12-25") String requestDuedate,
+            TodoRequest todoRequest
+    ) {   // todoRequest
+        log.info("post  /todo/regist");
 
-        log.info("post /todo/regist");
+        log.info("todo : " + todo);
+        log.info("duedate : " + duedate);
 
-        log.info("todo:" + todo);
-        log.info("duedate: " + duedate);
+        log.info("todo : " + requestTodo);
+        log.info("duedate : " + requestDuedate);
 
-        log.info("todo:" + requestTodo);
-        log.info("duedate: " + requestDuedate);
+        // Command 클래스 정의 : 파라미터를 받는 변수 선언
+        // Controller 메소드의 매개변수로 정의
+        log.info("TodoRequest : " + todoRequest);
 
-        // Command 클래스 정의: 파라미터를 받는 변수 선언
-        // Controller 메소드의 매개변수 정의
-        log.info("TodoRequest: " + todoRequest);
 
         model.addAttribute("todo", todo);
         model.addAttribute("duedate", duedate);
 
-        return "todo/regist"; // /WEB-INF/views/todo/regist.jsp
-//        return "redirect:/todo/list";
+        // return "todo/regist"; // /WEB-INF/views/todo/regist.jsp
+        return "redirect:/todo/list";
         // 일반 view와 구분은 redirect: 문자열로 구분
         // http://localhost:8080/todo/list
     }
+
 
 }
