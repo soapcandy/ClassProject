@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/mypage")
 @Log4j2
 public class MyPageController {
+
     @GetMapping("/mypage1")
-    public void mypage1 () {
+    public void mypage1() {
         log.info("GET /mypage/mypage1");
     }
 
     @GetMapping("/mypage2")
-    public void mypage2 () {
+    public void mypage2() {
         log.info("GET /mypage/mypage2");
     }
 
     @GetMapping("/mypage3")
-    public void mypage3 () {
+    public void mypage3() {
         log.info("GET /mypage/mypage3");
     }
-
 }

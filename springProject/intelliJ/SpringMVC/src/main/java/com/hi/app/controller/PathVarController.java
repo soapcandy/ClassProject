@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Log4j2
 public class PathVarController {
 
-    @RequestMapping("/members/{type}/{idx}") // http://localhost:8080/members/10
+    @RequestMapping("/members/{type}/{idx}") // http://localhost:8080/members/user/10
     public String getMemberInfo(
             @PathVariable("idx") String idx,
             @PathVariable("type") String type,
@@ -24,4 +24,5 @@ public class PathVarController {
 
         return "member/info";
     }
+
 }
