@@ -5,29 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6611b236-f445-4ef0-a824-864d476e70b8" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardModifyController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardReadController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/domain/BoardDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/domain/RequestModifyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardListService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardModifyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardReadService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardWriteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/modify.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/read.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/hi/board/ConnectionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/domain/BoardListPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardWriteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardWriteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/domain/RequestRegBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/domain/RequestRegBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/controller/BoardDeleteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/mapper/BoardMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/mapper/BoardMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BoardMapper.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/servlet-context.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sql/tbl_board_script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/sql/tbl_board_script.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/write.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardDeleteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardDeleteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardListService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/hi/board/service/BoardListService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mappers/BoardMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/modify.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/board/modify.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -216,7 +201,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684457634176</updated>
-      <workItem from="1684457636006" duration="13434000" />
+      <workItem from="1684457636006" duration="23162000" />
     </task>
     <servers />
   </component>

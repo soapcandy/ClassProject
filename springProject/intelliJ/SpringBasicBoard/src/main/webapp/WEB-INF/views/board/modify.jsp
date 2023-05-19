@@ -6,10 +6,15 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>
+    <style>
+        td  {
+            padding: 10px 20px;
+        }
+    </style>
 </head>
 <body>
 <h1>게시글 수정</h1>
