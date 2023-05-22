@@ -9,11 +9,10 @@
         select * from tbl_board order by bno desc limit #{param1}, #{param2}
     </select>
 
-    <select id="selectTotalCount"
-            resultType="int"
-    >
+    <select id="selectTotalCount" resultType="int">
         select count(*) from tbl_board
     </select>
+
 
     <select id="selectAll"
             resultType="com.hi.board.domain.BoardDTO"

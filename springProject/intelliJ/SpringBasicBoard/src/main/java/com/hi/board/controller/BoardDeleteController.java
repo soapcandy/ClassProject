@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @Log4j2
 public class BoardDeleteController {
+
     @Autowired
     private BoardDeleteService deleteService;
 
@@ -20,8 +21,7 @@ public class BoardDeleteController {
             @RequestParam("bno") int bno,
             HttpServletRequest request
     ) {
-
-        log.info("/board/delete: " + bno);
+        log.info("/board/delete : " + bno);
 
         deleteService.deleteBoard(bno, request);
 

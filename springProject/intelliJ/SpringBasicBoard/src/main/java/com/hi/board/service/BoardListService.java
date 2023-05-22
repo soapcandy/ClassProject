@@ -16,6 +16,7 @@ public class BoardListService {
 
     private final int countPerPage = 5;
 
+
     public List<BoardDTO> getBoadList() {
         return boardMapper.selectAll();
     }
@@ -24,8 +25,8 @@ public class BoardListService {
         // 현재 요청 페이지
         int requestPageNum = pageNum;
 
-        // 요청 페이지의 리스트 항목: List<BoardDTO>
-        List<BoardDTO> list = boardMapper.selectList((requestPageNum-1)*countPerPage, countPerPage);
+        // 요청 페이지의 리스트 항목 : List<BoardDTO>
+        List<BoardDTO> list = boardMapper.selectList((requestPageNum - 1) * countPerPage, countPerPage);
         int totalCount = boardMapper.selectTotalCount();
 
         BoardListPage page = new BoardListPage(
@@ -35,6 +36,9 @@ public class BoardListService {
                 totalCount
         );
 
-        return null;
+        return page;
+
     }
+
+
 }

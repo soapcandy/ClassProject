@@ -16,7 +16,7 @@ public class BoardDeleteService {
     @Autowired
     private BoardMapper boardMapper;
 
-    public int deleteBoard(int bno, HttpServletRequest request){
+    public int deleteBoard(int bno, HttpServletRequest request) {
 
         // 삭제 대상의 파일 이름을 획득
         BoardDTO board = boardMapper.selectByBno(bno);
@@ -27,17 +27,14 @@ public class BoardDeleteService {
 
         // 파일 삭제
         if (delFileName != null) {
-            // 웹 경로
+            // 웹경로
             String uri = "/uploadfile/board";
-
-            // 실제 경로
+            // 실제경로
             String realPath = request.getSession().getServletContext().getRealPath(uri);
-
-            // 삭제 대상파일의 -> File 객체
-            File delFile = new File(realPath);
-
-            // 현재 File 존재여부 확인
-            log.info("삭제 대상 파일 존재 유무: " + delFile.exists());
+            // 삭제 대상파일의 => File 객체
+            File delFile = new File(realPath, delFileName);
+            // 현재 File 이 존재 여부 확인
+            log.info("삭제 대상 파일 존재 유무 : " + delFile.exists());
 
             // 존재하면 삭제
             if (delFile.exists()) {

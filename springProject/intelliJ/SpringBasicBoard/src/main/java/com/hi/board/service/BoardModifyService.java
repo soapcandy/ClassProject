@@ -21,18 +21,18 @@ public class BoardModifyService {
     public int modifyBoardDTO(
             RequestModifyRequest modifyRequest,
             HttpServletRequest request
-    ) {
+    ){
 
         // 파일 저장 : 파일이 존재하면 저장
-        if (modifyRequest.getFile() != null
-                && modifyRequest.getFile().getSize() > 0) {
+        if(modifyRequest.getFile() != null
+                && modifyRequest.getFile().getSize()>0 ){
 
             // 웹 경로
             String uri = "/uploadfile/board";
             // 실제경로
             String realPath = request.getSession().getServletContext().getRealPath(uri);
             // 새로운 파일 이름
-            String newFilename = UUID.randomUUID().toString() + modifyRequest.getFile().getOriginalFilename();
+            String newFilename = UUID.randomUUID().toString()+modifyRequest.getFile().getOriginalFilename();
             // 저장
             File newFile = new File(realPath, newFilename);
             try {
