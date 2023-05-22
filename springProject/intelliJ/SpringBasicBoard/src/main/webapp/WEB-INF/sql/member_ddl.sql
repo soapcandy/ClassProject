@@ -10,7 +10,7 @@ CREATE TABLE `member` (
 );
 
 -- insert
-INSERT INTO `project`. `member`
+INSERT INTO `project`.`member`
 (`uid`, `pw`, `uname`, `uphoto`)
 VALUES
 ('cool', '1111', 'COOL', 'photo.jpg');

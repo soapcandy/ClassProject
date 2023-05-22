@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: hi
-  Date: 2023-05-18
-  Time: 오후 5:10
+  Date: 2023-05-22
+  Time: 오후 2:53
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -12,29 +12,27 @@
 </head>
 <body>
 
-<h1>게시글 쓰기</h1>
+<h1>회원 가입</h1>
 <hr>
-${loginInfo}
-<hr>
+
 <form method="post" enctype="multipart/form-data">
-    <table>
+
+    <table border="1">
         <tr>
-            <td>작성자</td>
-            <td><input type="text" name="writer" required value="${loginInfo.idx}"></td>
+            <td>아이디</td>
+            <td><input type="text" name="uid"></td>
         </tr>
         <tr>
-            <td>제목</td>
-            <td><input type="text" name="title" required></td>
+            <td>비밀번호</td>
+            <td><input type="password" name="pw"></td>
         </tr>
         <tr>
-            <td>내용</td>
-            <td>
-                <textarea name="content" cols="20" rows="5" required></textarea>
-            </td>
+            <td>이름</td>
+            <td><input type="text" name="uname"></td>
         </tr>
         <tr>
-            <td>첨부파일(이미지)</td>
-            <td><input type="file" name="file"></td>
+            <td>사진</td>
+            <td><input type="file" name="uphoto"></td>
         </tr>
         <tr>
             <td></td>
@@ -44,7 +42,9 @@ ${loginInfo}
             </td>
         </tr>
     </table>
+
 </form>
+
 
 </body>
 </html>
