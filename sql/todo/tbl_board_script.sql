@@ -3,10 +3,6 @@
 -- select
 select * from tbl_board;
 
-select bno, title, content, file, uname as writer, memidx
-from tbl_board b, member m
-where b.memidx=m.idx;
-
 
 -- insert
 insert into tbl_board (title, content, writer) 
@@ -14,13 +10,7 @@ values ('게시글 테스트1', '게시글 쓰기 테스트 1', '테스터');
 
 -- insert into tbl_board (title, content, writer) values (#{}, #{}, #{})
 
-insert into tbl_board(title, content, memidx)
-value('게시글 테스트1', '글쓰기 테스트1', 1);
 
--- insert into tbl_board(title, content, memidx) value(#{}, #{}, #{});
-
-insert into tbl_board(title, content, memidx)
-value('게시글 테스트1', '글쓰기 테스트1', 5);
 
 -- update
 update tbl_board 
