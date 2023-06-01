@@ -9,8 +9,10 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface ReplyMapper {
 
-    @Select("select*from tbl_reply where rno=#{rno}")
+
+    @Select("select * from tbl_reply where rno=#{rno}")
     ReplyDTO selectByRno(int rno);
+
 
     // insert
     @Insert("insert into tbl_reply (bno, reply, memIdx) values (#{bno},#{reply},#{memIdx})")
